@@ -4,16 +4,8 @@ module.exports = {
     project: 'tsconfig.json',
     sourceType: 'module',
   },
-  plugins: [
-    "prettier",
-    "import-helpers",
-    '@typescript-eslint/eslint-plugin'
-  ],
-  extends: [
-    "google",
-    "prettier",
-    'plugin:@typescript-eslint/recommended',
-  ],
+  plugins: ['prettier', 'import-helpers', '@typescript-eslint/eslint-plugin'],
+  extends: ['google', 'prettier', 'plugin:@typescript-eslint/recommended'],
   root: true,
   env: {
     node: true,
@@ -21,36 +13,33 @@ module.exports = {
   },
   ignorePatterns: ['.eslintrc.js'],
   rules: {
-    "prettier/prettier": [
-      "error",
+    'prettier/prettier': [
+      'error',
       {
-        "singleQuote": true,
-        "trailingComma": "es5"
-      }
+        singleQuote: true,
+        trailingComma: 'es5',
+      },
     ],
-    "import-helpers/order-imports": [
-      "warn",
+    'import-helpers/order-imports': [
+      'warn',
       {
-        "newlinesBetween": "always",
-        "groups": [
-          "/^react/",
-          "/^next/",
-          "/@/",
-          "module",
-          [
-            "parent",
-            "sibling",
-            "index"
-          ]
+        newlinesBetween: 'always',
+        groups: [
+          '/^react/',
+          '/^next/',
+          '/@/',
+          'module',
+          ['parent', 'sibling', 'index'],
         ],
-        "alphabetize": {
-          "order": "asc",
-          "ignoreCase": true
-        }
-      }
+        alphabetize: {
+          order: 'asc',
+          ignoreCase: true,
+        },
+      },
     ],
-    "@typescript-eslint/no-namespace": "off",
-    "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+    '@typescript-eslint/no-namespace': 'off',
+    '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+    'new-cap': 'off',
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
